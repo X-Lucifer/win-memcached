@@ -9,10 +9,12 @@
 #define MyDescription "Windows Memcached Service"
 #define MyAppLowerName "memcached"
 #define MyAppPlatform "cygwin"
-#define MyAppRuntime "cygwin1.dll"
+;运行时组件
+#define MyLibRuntime "cygwin1.dll"
+#define MyLibEvent "cygevent-2-1-7.dll"
 ;升级需要更新的代码块
 #define MyPath "D:\Publish\Memcached"
-#define MyAppVersion "1.6.10"
+#define MyAppVersion "1.6.12"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -56,13 +58,9 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\nssm.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyAppRuntime}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyLibRuntime}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyLibEvent}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyAppLowerName}.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\cygevent_core-2-1-7.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\cygevent_extra-2-1-7.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\cygevent_openssl-2-1-7.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\cygevent_pthreads-2-1-7.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\cygevent-2-1-7.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Run]

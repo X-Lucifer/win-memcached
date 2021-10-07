@@ -12,7 +12,7 @@
 #define MyAppRuntime "msys-2.0.dll"
 ;升级需要更新的代码块
 #define MyPath "D:\Publish\Memcached"
-#define MyAppVersion "1.6.10"
+#define MyAppVersion "1.6.12"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
