@@ -1,8 +1,6 @@
 ---
 title: Windows Memcached Server
-created: '2021-08-15 12:00:00'
-modified: '2021-08-15 12:00:00'
-version: '1.16.10'
+version: '1.16.15'
 ---
 
 ## Windows Memcached Server
