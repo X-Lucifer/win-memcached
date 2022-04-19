@@ -12,9 +12,12 @@
 ;运行时组件
 #define MyLibRuntime "cygwin1.dll"
 #define MyLibEvent "cygevent-2-1-7.dll"
+#define MyLibGz "cygz.dll"
+#define MyLibCrypto "cygcrypto-1.1.dll"
+#define MyLibSsl "cygssl-1.1.dll"
 ;升级需要更新的代码块
 #define MyPath "D:\Publish\Memcached"
-#define MyAppVersion "1.6.12"
+#define MyAppVersion "1.6.15"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -60,6 +63,9 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\nssm.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyLibRuntime}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyLibEvent}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyLibGz}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyLibCrypto}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyLibSsl}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyPath}\{#MyAppLowerName}-{#MyAppPlatform}\{#MyAppLowerName}.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
