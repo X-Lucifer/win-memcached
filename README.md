@@ -1,6 +1,6 @@
 ---
 title: Windows Memcached Server
-version: '1.16.12'
+version: '1.16.15'
 ---
 
 ## Windows Memcached Server
